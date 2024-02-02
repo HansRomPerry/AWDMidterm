@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Entertainment List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Entertainment List</h1>
+    </header>
+
+    <section id="games" class="category">
+        <h2>Games</h2>
+        <div class="card">
+            <h3>The Witcher 3: Wild Hunt</h3>
+            <p>A dark fantasy in the world created by Andrzej Sapkowski with a rich, deep and branching storyline.</p>
+            <p>Rating: 10!</p>
+            <img src="https://buy.thewitcher.com/build/images/home/bg-witcher3-1440@1x-ce4038c1.jpg" alt="The Witcher 3: Wild Hunt">
+        </div>
+    </section>
+
+    <section id="movies" class="category">
+        <h2>Movies</h2>
+        <div class="card">
+            <h3>Inception</h3>
+            <p>A mind-bending sci-fi action directed by Christopher Nolan.</p>
+            <p>Rating: 9.5</p>
+            <img src="http://t3.gstatic.com/images?q=tbn:ANd9GcTWjjyjCZYtoyU5EtXDDet8YStQwD5MzN-jStW-GlBRffn6EaNXzl5yTwaTo33PLxC_t9EC" alt="Inception">
+        </div>
+    </section>
+
+    <section id="shows" class="category">
+        <h2>Shows</h2>
+        <div class="card">
+            <h3>Stranger Things</h3>
+            <p>A sci-fi horror story created by The Duffer Brothers.</p>
+            <p>Rating: 8.5</p>
+            <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcSsJyOfdEt7I5W1j_UcsQ_EqHBacu5GlFIOs_UnTsSsFxM5eUgEsJcVnz63LCc2H46KP3Jo" alt="Stranger Things">
+        </div>
+    </section>
+
+    <div class="input-container">
+        <label for="category">Select Category:</label>
+        <select id="category">
+            <option value="games">Games</option>
+            <option value="movies">Movies</option>
+            <option value="shows">Shows</option>
+        </select>
+
+        <label for="title">Title:</label>
+        <input type="text" id="title" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" rows="4" required></textarea>
+
+        <label for="rating">Rating (1-10):</label>
+        <input type="number" id="rating" min="1" max="10" required>
+
+        <label for="image">Image URL:</label>
+        <input type="url" id="image">
+
+        <button onclick="addItem()">Add Item</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
